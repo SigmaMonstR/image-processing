@@ -38,10 +38,27 @@ def randomTask(img, tasks, size):
 
 
 #example
-#randomTask('test.jpg',10, 100)
+import os
+path = "/Users/jeff/Documents/Github/image-processing/test"
+os.chdir(path)
 
 
+records = os.listdir(path)
 
+for x in range(1, len(records)):
+    randomTask(records[x], 10, 150)
 
+import imread
+samples = []
+img = imread('a1.jpg-0.jpeg')
+X = img.reshape(-1, 3)
+samples.append(X)
+img = 'a1.jpg-0.jpeg'
+ 
+import os,sys
+import Image
+jpgfile = Image.open("picture.jpg")
+
+print jpgfile.bits, jpgfile.size, jpgfile.format
 
 
